@@ -1,6 +1,6 @@
 ---
 title: "Midterm_03"
-author: "林家君"
+author: "June Lin"
 date: "2017/2/13"
 output: html_document
 ---
@@ -68,6 +68,9 @@ library(ggplot2)
 ggplot(diamonds, aes(x = cut)) +
   geom_bar(aes(fill = color), position = "fill") + 
   ylab("Percentage")
-
 ```    
+
+> "R is funny - June, Lin"
+
+![Thank You](thank_you.jpg)
 
