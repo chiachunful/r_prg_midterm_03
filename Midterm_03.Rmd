@@ -1,0 +1,73 @@
+---
+title: "Midterm_03"
+author: "林家君"
+date: "2017/2/13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 使用R Markdown做作業，需包含**五種**圖形
+
+    -散佈圖
+
+    -線圖
+
+    -直方圖
+
+    -盒鬚圖
+
+    -長條圖
+
+###散佈圖
+
+```{r }
+library(ggplot2)
+ggplot(economics, aes(x = date, y = pce, color = unemploy)) +
+  geom_point() + 
+  ggtitle("Date vs. Personal consumption expenditures") +
+  xlab("Date") + 
+  ylab("Personal Consumption Expenditures")
+```    
+
+###線圖
+
+```{r }
+library(ggplot2)
+ggplot(economics, aes(x = date, y = pce, color = unemploy)) +
+  geom_line() + 
+  ggtitle("Date vs. Personal consumption expenditures") +
+  xlab("Date") + 
+  ylab("Personal Consumption Expenditures")
+```    
+
+###直方圖
+
+```{r }
+library(ggplot2)
+ggplot(diamonds, aes(x = price)) +
+  geom_histogram(bins = 15)
+ggplot(diamonds, aes(x = carat)) +
+  geom_histogram(bins = 8)
+```    
+
+###盒鬚圖
+
+```{r }
+library(ggplot2)
+ggplot(diamonds, aes(x = cut, y = carat)) +
+  geom_boxplot()
+```    
+
+###長條圖
+
+```{r }
+library(ggplot2)
+ggplot(diamonds, aes(x = cut)) +
+  geom_bar(aes(fill = color), position = "fill") + 
+  ylab("Percentage")
+
+```    
+
